@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
     // This method toggles the color of the score between red and green for visual purposes
     private void flashGreen() {
-        long start = System.currentTimeMillis();
         ((TextView)findViewById(R.id.score)).setTextColor(Color.GREEN);
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -131,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
             temp[randomLocation] = t0;
         }
 
-        //Toast.makeText(this, optionsForGuessing + " " + temp.toString(), Toast.LENGTH_LONG).show();
         for (int i=0; i<12; i++) {
             buttons[i].setText(String.valueOf(temp[i]));
         }
@@ -193,11 +190,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
-
-
-
